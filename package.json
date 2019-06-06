@@ -1,0 +1,29 @@
+{
+  "name": "cryptomancy-shard",
+  "version": "1.0.0",
+  "description": "really basic secret sharing based on xor",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ansuz/cryptomancy-shard.git"
+  },
+  "keywords": [
+    "cryptomancy"
+  ],
+  "author": "ansuz",
+  "license": "AGPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/ansuz/cryptomancy-shard/issues"
+  },
+  "homepage": "https://github.com/ansuz/cryptomancy-shard#readme",
+  "dependencies": {
+    "cryptomancy-util": "^1.0.3"
+  },
+  "devDependencies": {
+    "cryptomancy-format": "^1.0.2",
+    "cryptomancy-source": "^1.0.3"
+  }
+}
