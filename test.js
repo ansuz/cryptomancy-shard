@@ -7,14 +7,14 @@ var Source = require("cryptomancy-source");
     var secret = 'pewpewpew';
     var u8_secret = Format.decodeUTF8(secret);
 
-    var shards = Shard.create(Source.bytes.secure(), u8_secret, 5);
+    var shards = Shard.split(Source.bytes.secure(), u8_secret, 5);
 
     var serialized = shards.map(Format.encode64);
     console.log(serialized);
 
-    var combined = Shard.combine(shards);
+    var joined = Shard.join(shards);
 
-    var recovered = Format.encodeUTF8(combined);
+    var recovered = Format.encodeUTF8(joined);
 
     Assert.equal(recovered, secret);
 }());

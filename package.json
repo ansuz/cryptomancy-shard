@@ -1,6 +1,6 @@
 {
   "name": "cryptomancy-shard",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "really basic secret sharing based on xor",
   "main": "index.js",
   "scripts": {
@@ -11,7 +11,12 @@
     "url": "git+https://github.com/ansuz/cryptomancy-shard.git"
   },
   "keywords": [
-    "cryptomancy"
+    "cryptomancy",
+    "secret",
+    "sharing",
+    "cryptography",
+    "otp",
+    "xor"
   ],
   "author": "ansuz",
   "license": "AGPL-3.0-or-later",

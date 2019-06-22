@@ -1,7 +1,7 @@
 var Util = require("cryptomancy-util");
 var Shard = module.exports;
 
-Shard.create = function (source, secret, n) {
+Shard.split = function (source, secret, n) {
     // secret should be a Uint8Array
     if (!(secret instanceof Uint8Array)) { throw new Error("expected Uint8Array"); }
     // n should be a positive integer, let's just call it a Uint8
@@ -22,10 +22,10 @@ Shard.create = function (source, secret, n) {
     return shards;
 };
 
-Shard.combine = function (shards) {
+Shard.join = function (shards) {
     // shards should be an array
     if (!Array.isArray(shards)) { throw new Error("Expected Array"); }
-    if (Array.length >= 2) { throw new Error("Two or more shares are required"); }
+    if (shards.length < 2) { throw new Error("Two or more shards are required"); }
 
     // xor it all back together
     return shards.reduce(function (A, B) {
